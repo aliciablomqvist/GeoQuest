@@ -1,0 +1,103 @@
+
+[
+  {
+    "place": "Hållet",
+    "question": "Which vitamin is needed to maintain healthy gums?",
+    "answer": "1",
+    "options": [
+      { "key": "1", "value": "Vitamin C" },
+      { "key": "X", "value": "Vitamin D" },
+      { "key": "2", "value": "Vitamin K" }
+    ]
+  },
+  {
+    "place": "Segelstamosse",
+    "question": "What is the name of the world's largest island?",
+    "answer": "1",
+    "options": [
+      { "key": "1", "value": "Greenland" },
+      { "key": "X", "value": "Australia" },
+      { "key": "2", "value": "Madagascar" }
+    ]
+  },
+  {
+    "place": "Nävsjömossen",
+    "question": "Which planet in the solar system is known for its characteristic rings?",
+    "answer": "2",
+    "options": [
+      { "key": "1", "value": "Mars" },
+      { "key": "X", "value": "Jupiter" },
+      { "key": "2", "value": "Saturn" }
+    ]
+  },
+  {
+    "place": "Femöre",
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "answer": "1",
+    "options": [
+      { "key": "1", "value": "William Shakespeare" },
+      { "key": "X", "value": "Henrik Ibsen" },
+      { "key": "2", "value": "Anton Chekhov" }
+    ]
+  },
+  {
+    "place": "Lindudden",
+    "question": "What is the chemical process where hydrogen and oxygen combine to create water called?",
+    "answer": "X",
+    "options": [
+      { "key": "1", "value": "Sublimation" },
+      { "key": "X", "value": "Condensation" },
+      { "key": "2", "value": "Synthesis" }
+    ]
+  },
+  {
+    "place": "Ryssbergen",
+    "question": "Which of the following colors is a primary color according to the RGB color system?",
+    "answer": "X",
+    "options": [
+      { "key": "1", "value": "Orange" },
+      { "key": "X", "value": "Purple" },
+      { "key": "2", "value": "Green" }
+    ]
+  },
+  {
+    "place": "Labroängar",
+    "question": "What is the speed of light in vacuum?",
+    "answer": "1",
+    "options": [
+      { "key": "1", "value": "299,792 kilometers per second" },
+      { "key": "X", "value": "100,000 kilometers per second" },
+      { "key": "2", "value": "1,000,000 kilometers per second" }
+    ]
+  },
+  {
+    "place": "Strandstuviken",
+    "question": "Who was the President of the USA during World War II?",
+    "answer": "1",
+    "options": [
+      { "key": "1", "value": "Franklin D. Roosevelt" },
+      { "key": "X", "value": "Harry S. Truman" },
+      { "key": "2", "value": "Dwight D. Eisenhower" }
+    ]
+  },
+  {
+    "place": "Rågö",
+    "question": "What is the world's longest river?",
+    "answer": "1",
+    "options": [
+      { "key": "1", "value": "Amazon River" },
+      { "key": "X", "value": "Nile River" },
+      { "key": "2", "value": "Yangtze River" }
+    ]
+  },
+  {
+    "place": "Stendörren",
+    "question": "What is the chemical symbol for oxygen?",
+    "answer": "1",
+    "options": [
+      { "key": "1", "value": "O" },
+      { "key": "X", "value": "S" },
+      { "key": "2", "value": "Au" }
+    ]
+  }
+]

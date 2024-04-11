@@ -1,0 +1,40 @@
+<!-- SUMMARY: HTML for quiz page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GeoQuest</title>
+    <link rel="stylesheet" href="css/quiz.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div id="demo">
+      <div class="header">
+        <h1>Start Playing!</h1>
+      </div>
+
+      <nav>
+        <a href="index.html" class="home-icon">Home</a>
+        <a href="finish.html" class="score-icon">High Scores</a>
+        <a href="#" class="simulator-icon" onclick="toggleSimulation()"
+          >Simulation</a
+        >
+      </nav>
+
+      <div id="question-container">
+        <div id="text"></div>
+        <img
+          src="img/Compass-Gif.gif"
+          alt="Compass gif by Elisa Romano"
+          style="float: left; margin-right: 10px; max-width: 100px"
+        />
+        <div id="distance"></div>
+        <div id="question"></div>
+        <div id="score">Current score: 0</div>
+      </div>
+    </div>
+    <script src="js/distance.js"></script>
+  </body>
+</html>

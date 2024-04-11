@@ -1,0 +1,68 @@
+/*SUMMARY: Styling for high score page*/
+.header {
+  background-image: url("../img/flowers.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border: 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px 10px 0px 0px;
+}
+
+h2 {
+  text-align: center;
+}
+
+#score {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1d242a;
+  padding: 10px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.high-score-item {
+  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #e1f1da;
+  text-align: center;
+  margin-left: -30px;
+  border-radius: 10px;
+  max-width: 1000px;
+  list-style-type: none;
+}
+
+.new-high-score {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#high-score {
+  background-color: #c0d0c0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+img {
+  display: block;
+}

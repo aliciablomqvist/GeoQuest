@@ -1,0 +1,25 @@
+GeoQuest: The Mobile Scavenger Hunt
+In this project, I have developed a mobile scavenger hunt application called GeoQuest. The purpose of the assignment is to showcase proficiency in HTML, CSS, and JavaScript while incorporating GPS functionality and at least one API into the application. The app is designed to be hosted on Github Pages.
+
+Features Implemented:
+- Selection of Places: I have chosen a set of ten locations to serve as waypoints for the scavenger hunt.
+- Geofencing: A geofence has been created around each location to trigger events when the user enters or exits the designated area.
+- GPS Functionality: The mobile app tracks the user's GPS position in real-time using the device's location services.
+- Question Prompting: As the user enters a geofenced area, the app prompts a question related to that specific location. Each question is accompanied by an image for visual context.
+- Scoring System: Points are assigned to each location/question, and the user's current score is displayed within the app.
+- Distance to Next Location: The app calculates and displays the distance to the next waypoint to guide the user through the scavenger hunt.
+- Question Management: Questions are stored in a separate file, allowing for easy updates and management of content.
+- GPS Simulation: For demonstration purposes during presentations, the app features the ability to simulate GPS positions, enabling the showcasing of its functionality without actual movement.
+- Directional Guidance: The app provides directional guidance to the next location, indicating the cardinal direction the user should head towards.
+- Distance Display: Along with directional guidance, the app also shows the distance to the next location, aiding the user in navigation.
+
+Implementation Details:
+The application is built using HTML, CSS, and JavaScript, with additional integration of APIs for geolocation services.
+
+Geofencing functionality is achieved through JavaScript, where events are triggered based on the user's proximity to predefined coordinates.
+
+The scoring system, question management, and GPS simulation features are also implemented in JavaScript to provide a seamless user experience.
+
+The user interface is designed using HTML and CSS to ensure accessibility and ease of use. Responsive design principles are applied to ensure compatibility across various devices and screen sizes.
+
+Overall, GeoQuest serves as a demonstration of proficiency in web development technologies while offering an engaging and interactive experience for users participating in the mobile scavenger hunt.
