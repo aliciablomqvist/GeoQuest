@@ -79,6 +79,7 @@ const scoreDiv = document.getElementById("score");
 const questionDiv = document.getElementById("question");
 const distanceDiv = document.getElementById("distance");
 
+
 // Toggle between real and simulated location modes.
 
 function toggleSimulation() {
@@ -88,6 +89,8 @@ function toggleSimulation() {
   if (simulationMode && !simulationModeShown) {
     alert("Simulation mode is on.");
     simulationAlertShown = true;
+    getLocation();
+
   } else if (!simulationMode && !simulationModeShown) {
     alert("Simulation mode is off.");
     simulationModeShown = true;
@@ -97,7 +100,9 @@ function toggleSimulation() {
 // Get user location: Real or simulated
 function getLocation() {
   if (useRealLocation && navigator.geolocation) {
+    
     navigator.geolocation.getCurrentPosition(showPosition);
+    
   } else {
     if (visitedPlaces.length === places.length) {
       visitedPlaces = [];
@@ -328,13 +333,18 @@ function handleAnswer(userAnswer, correctAnswer) {
 
   answeredQuestions.push(placeIndex);
 
-  if (answeredQuestions.length === places.length) {
+
+if (answeredQuestions.length === places.length) {
+  var finishButton = document.getElementById("finish-button");
+  finishButton.classList.remove("hidden");
+  finishButton.addEventListener("click", function() {
     window.location.href = "finish.html";
-  } else {
-    simulateNextQuestion();
-  }
+  });
+} else {
+  simulateNextQuestion();
 }
 
+}
 // Simulate the next question.
 function simulateNextQuestion() {
   getLocation();
@@ -343,4 +353,4 @@ function simulateNextQuestion() {
 getLocation();
 
 // Periodically update user's location in simulation
-setInterval(getLocation, 10000);
+setInterval(getLocation, 100000); 

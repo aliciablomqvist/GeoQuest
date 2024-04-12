@@ -43,7 +43,7 @@
   {
     "place": "Lindudden",
     "question": "What is the chemical process where hydrogen and oxygen combine to create water called?",
-    "answer": "X",
+    "answer": "2",
     "options": [
       { "key": "1", "value": "Sublimation" },
       { "key": "X", "value": "Condensation" },
@@ -53,7 +53,7 @@
   {
     "place": "Ryssbergen",
     "question": "Which of the following colors is a primary color according to the RGB color system?",
-    "answer": "X",
+    "answer": "2",
     "options": [
       { "key": "1", "value": "Orange" },
       { "key": "X", "value": "Purple" },
@@ -83,7 +83,7 @@
   {
     "place": "Rågö",
     "question": "What is the world's longest river?",
-    "answer": "1",
+    "answer": "X",
     "options": [
       { "key": "1", "value": "Amazon River" },
       { "key": "X", "value": "Nile River" },
