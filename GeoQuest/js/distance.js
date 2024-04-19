@@ -192,9 +192,9 @@ function showNextNearestPlace() {
       directionToNextPlace;
   } else {
     distanceDiv.innerHTML = "Congratulations, all places have been visited!";
-    setInterval((window.location.href = "finish.html"), 8000);
   }
 }
+
 
 function findNextNearestPlace() {
   const unvisitedPlaces = places.filter(
@@ -215,7 +215,6 @@ function findNextNearestPlace() {
       nearestPlace = unvisitedPlaces[i];
     }
   }
-
   return nearestPlace;
 }
 
@@ -296,7 +295,6 @@ function displayQuestion(placeName) {
           });
           buttonContainer.appendChild(button);
         }
-
         questionDiv.appendChild(buttonContainer);
       } else {
         questionDiv.innerHTML = "No question available for " + placeName;
@@ -312,39 +310,51 @@ function handleAnswer(userAnswer, correctAnswer) {
     return;
   }
   const placeIndex = places.findIndex((p) => p.name === nearestPlace.name);
-  if (answeredQuestions.includes(placeIndex)) {
-    if (questionDiv)
-      questionDiv.innerHTML = "This question has already been answered.";
-    return;
-  }
+    if (answeredQuestions.includes(placeIndex)) {
+        if (questionDiv)
+            questionDiv.innerHTML = "This question has already been answered.";
+        return;
+    }
 
-  if (userAnswer === correctAnswer) {
-    score += 10;
+    if (userAnswer === correctAnswer) {
+        score += 10;
+        if (scoreDiv) scoreDiv.innerText = "Correct! Current score: " + score;
+    } else {
+        score -= 5;
+        if (scoreDiv) scoreDiv.innerText = "Incorrect. Current score: " + score;
+    }
+    localStorage.setItem("score", score); // Save score to localStorage
+    answeredQuestions.push(placeIndex); // Save the index of answered question
 
-    if (scoreDiv) scoreDiv.innerText = "Correct! Current score: " + score;
-    else console.error("scoreDiv is null");
-  } else {
-    score -= 5;
-    if (scoreDiv) scoreDiv.innerText = "Incorrect. Current score: " + score;
-    else console.error("scoreDiv is null");
-  }
-  // Save score to localStorage
-  localStorage.setItem("score", score);
-
-  answeredQuestions.push(placeIndex);
-
-
-if (answeredQuestions.length === places.length) {
-  var finishButton = document.getElementById("finish-button");
-  finishButton.classList.remove("hidden");
-  finishButton.addEventListener("click", function() {
-    window.location.href = "finish.html";
-  });
-} else {
-  simulateNextQuestion();
+    // Check if all questions have been answered
+    if (answeredQuestions.length === places.length) {
+        showModal(); // Call showModal when all questions are answered
+    } else {
+        simulateNextQuestion(); // Otherwise, simulate the next question
+    }
 }
 
+function showModal() {
+  const modal = document.getElementById('score-modal');
+  const finalScore = document.getElementById('final-score');
+  finalScore.textContent = `Your final score is: ${score}`;
+  modal.classList.remove('hidden'); // Show the modal
 }
+
+function hideModal() {
+  const modal = document.getElementById('score-modal');
+  modal.classList.add('hidden'); // Hide the modal
+}
+
+document.getElementById('play-again-button').addEventListener('click', function() {
+  score = 0; // Reset score
+  visitedPlaces = []; // Reset visited places
+  answeredQuestions = []; // Reset answered questions
+  scoreDiv.innerText = 'Current score: ' + score;
+  hideModal(); // Hide the modal
+  getLocation(); // Restart the game
+});
+
 // Simulate the next question.
 function simulateNextQuestion() {
   getLocation();

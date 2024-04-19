@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
 <body>
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
+  </div> 
+
     <div id="demo">
 
       <div class="header">
-        <h1>Start Playing!</h1>
+        <div id="timeDisplay" class="clock">Loading time data...</div> 
       </div>
 
+ 
       <nav>
         <a href="index.html" class="home-icon">Home</a>
         <a href="finish.html" class="score-icon">High Scores</a>
@@ -23,23 +28,36 @@
           >Simulation</a
         >
       </nav>
-
+ 
       <div id="question-container">
-        <div id="text"></div>
         <img
           src="img/Compass-Gif.gif"
           alt="Compass gif by Elisa Romano"
-          style="float: left; margin-right: 10px; max-width: 100px"
+          style="float: left; margin-right: 10px; max-width: 100px; max-height: 68px; padding-bottom: 5px; padding-top: 10px;"
         />
-        <div id="distance"></div>
+ 
+        <div id="distance" class="text"> Loading...</div>
+        
         <div id="question"></div>
-        <div id="score">Current score: 0</div>
 
+  <div id="score">Score: 0</div>
+
+  <div id="score-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h1>Game Over!</h1>
+        <p id="final-score"></p>
+        <button id="play-again-button">Play Again</button>
+    </div>
+</div>
+
+</div>
 
       </div>
-      <!-- Placera den här knappen där du vill att den ska visas -->
-      <button id="finish-button" class="hidden" >Finish</button>
+
     </div>
     <script src="js/distance.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/loader.js"></script>
   </body>
 </html>
